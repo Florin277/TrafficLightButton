@@ -8,30 +8,10 @@
   </head>
   <body>
     <div class="container">
-      <button class="btn btn-primary btn-lg" id="buton" style="background: red" >
+      <button class="btn btn-primary btn-lg" id="buton" onclick="chageColor()" style="background: red"  >
       </button>
     </div>
-    <script>
-      let x = document.getElementById("buton");
-      let click = 0;
-      function changeColor() {
-        x.onclick = function() {
-          if (click == 0) {
-            x.style.background = "yellow";
-            click = 1;
-          } else if (click == 1) {
-            x.style.background = "green";
-            click = 2;
-          } else if (click == 2) {
-            x.style.background = "red";
-            click = 0;
-          }
-        }
-      }
-      changeColor();
-      window.setInterval(function() {
-        x.onclick();
-      }, 10000);
+    <script src="script.js">
     </script>
   </body>
 </html>
