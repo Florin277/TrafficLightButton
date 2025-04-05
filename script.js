@@ -1,13 +1,17 @@
-let x = document.getElementById("buton"), click = 0;
-const seconds = 10000;
-let colors = ["yellow", "green", "red"];
+let buttonColors = document.getElementById("button");
+let click = 0;
+const TENSECONDS_MS = 1000;
+const colors = ["yellow", "green", "red"];
+
 function changeColor() {
-    x.onclick = function() {
-        x.style.background = colors[click % 3];
+    buttonColors.changeColor = function() {
+        buttonColors.style.background = colors[click % 3];
         ++click;
     }
 }
+
 changeColor();
-window.setInterval(function() {
-    x.onclick();
-}, seconds);
+
+setInterval(function() {
+    buttonColors.onclick();
+}, TENSECONDS_MS);
