@@ -1,6 +1,6 @@
 let buttonColors = document.getElementById("button");
 let click = 0;
-const TENSECONDS_MS = 1000;
+const TENSECONDS_MS = 10000;
 const colors = ["yellow", "green", "red"];
 
 function changeColor() {
