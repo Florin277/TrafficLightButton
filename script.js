@@ -1,17 +1,17 @@
-let buttonColors = document.getElementById("button");
+let buttonColors = document.getElementById("myButton");
 let click = 0;
 const TENSECONDS_MS = 10000;
 const colors = ["yellow", "green", "red"];
 
 function changeColor() {
-    buttonColors.changeColor = function() {
+    buttonColors.addEventListener('click', () =>  {
         buttonColors.style.background = colors[click % 3];
         ++click;
-    }
+    })
 }
 
 changeColor();
 
 setInterval(function() {
-    buttonColors.onclick();
+    buttonColors.click();
 }, TENSECONDS_MS);
